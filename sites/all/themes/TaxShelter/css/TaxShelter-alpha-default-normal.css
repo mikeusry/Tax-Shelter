@@ -1,0 +1,45 @@
+/* @override 
+	http://taxshelter.biz/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?ly63ma
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?lymign
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?lymjkx
+*/
+
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+#section-header {
+	background-color: red;
+}
+
+#main-menu li {
+	display: inline;
+}
+#main-menu {
+	position: relative;
+	bottom: 160px;
+	float: right;
+}
+div.branding-data {
+	margin-right: auto;
+	margin-left: auto;
+	width: auto;
+}
+
+#block-block-4 {
+	text-align: left;
+}
+
+#block-views-services-block div.view-content div.icons img {
+	height: auto;
+	width: 48%;
+	max-width: 450px;
+	margin-bottom: 10px;
+}
+
+div.view-services div.even div.icons img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+div.view-services div.odd div.icons img {
+	float: left;
+	margin-bottom: 10px;
+}

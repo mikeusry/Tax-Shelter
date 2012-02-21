@@ -1,0 +1,32 @@
+/* @override 
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-narrow.css?lyfcz7
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-narrow.css?lymign
+	http://taxshelter.bix/sites/all/themes/omega/alpha/css/grid/alpha_default/narrow/alpha-default-narrow-12.css?lymjkx
+*/
+
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+
+
+
+#section-header {
+	background-color: black;
+}
+
+
+
+#block-views-services-block div.view-content div.icons img {
+	height: auto;
+	width: 48%;
+	max-width: 450px;
+	margin-bottom: 10px;
+}
+
+div.view-services div.even div.icons img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+div.view-services div.odd div.icons img {
+	float: left;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,187 @@
+/* @override 
+	http://taxshelter.biz/sites/all/themes/TaxShelter/css/global.css?ly5u6f
+	http://taxshelter.biz/sites/all/themes/TaxShelter/css/global.css?ly63ma
+	http://taxshelter.biz/sites/all/themes/TaxShelter/css/global.css?lybgrf
+	http://taxshelter.biz/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-narrow.css?lybgrf
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lyblu3
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lybmna
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lyfbfp
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lyfcz7
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lymign
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lymjkx
+*/
+
+/* This file will hold the main styles for your website. */
+
+
+div.branding-data {
+	margin-right: auto;
+	margin-left: auto;
+	width: 253px;
+}
+
+/* @group General */
+
+div.field-name-field-taxonomy a {
+	text-decoration: none;
+	display: inline;
+	float: left;
+	margin-left: .8em;
+	margin-right: .8em;
+	color: #008000;
+}
+
+div.field-name-field-taxonomy div.field-label {
+	color: gray;
+}
+.weak {
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1.front {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+	color: #353535;
+}
+
+
+/* @end */
+
+/* @group Body & Wrappers */
+
+#page {
+	background-color: silver;
+}
+
+
+#section-header {
+	background-color: green;
+}
+
+#zone-content {
+	background-color: white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#zone-footer-wrapper {
+	background-color: black;
+	color: whitesmoke;
+	padding-top: 10px;
+	border-top: medium solid silver;
+}
+
+/* @end */
+
+/* @group Interior Zones */
+
+#zone-header {
+background-color: white;
+-webkit-border-top-left-radius: 20px;
+-webkit-border-top-right-radius: 20px;
+-moz-border-radius-topleft: 20px;
+-moz-border-radius-topright: 20px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+	padding-top: 10px;
+	padding-right: 1px;
+}
+
+
+
+/* @end */
+
+/* @group Navigation */
+
+#main-menu a {
+	color: white;
+	font-size: 1.4em;
+	text-decoration: none;
+}
+
+#main-menu li {
+	text-align: center;
+
+}
+
+
+
+/* @end */
+
+/* @group Contact Block */
+
+#webform-component-office div.description {
+	color: whitesmoke;
+}
+
+#block-webform-client-block-22 {
+	background-color: #353535;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 8px;
+	overflow: hidden;
+	color: white;
+}
+
+#block-webform-client-block-22 h2 {
+	text-align: center;
+}
+
+#block-webform-client-block-22 input, #block-webform-client-block-22 select {
+	width: 100%;
+}
+
+
+
+/* @end */
+
+/* @group Custom Blocks */
+.walmart img {
+	width: 100%;
+	height: auto;
+}
+
+.walmartoffer {
+	position: relative;
+	bottom: 2em;
+	left: 30px;
+	font-size: 1.75em;
+	color: #008000;
+}
+
+div.freecard {
+	position: absolute;
+	padding-left: 65%;
+	top: 10%;
+	line-height: 1em;
+	font-weight: bold;
+	letter-spacing: .5em;
+	font-size: 2.25em;
+	font-style: italic;
+}
+
+#block-block-4 {
+	font: 1.8em 'Lato', sans-serif;
+	text-align: center;
+	margin-top: .5em;
+	color: #FFFBDD;
+	text-transform: uppercase;
+}
+
+div.field-name-field-icon img {
+	height: auto;
+	width: 100%;
+	max-width: 450px;
+}
+
+#block-views-services-block div.view-content div.icons img {
+	height: auto;
+	width: 100%;
+	max-width: 450px;
+	margin-bottom: 10px;
+}
+
+
+/* @end */
