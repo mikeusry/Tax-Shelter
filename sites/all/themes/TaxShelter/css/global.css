@@ -1,15 +1,4 @@
-/* @override 
-	http://taxshelter.biz/sites/all/themes/TaxShelter/css/global.css?ly5u6f
-	http://taxshelter.biz/sites/all/themes/TaxShelter/css/global.css?ly63ma
-	http://taxshelter.biz/sites/all/themes/TaxShelter/css/global.css?lybgrf
-	http://taxshelter.biz/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-narrow.css?lybgrf
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lyblu3
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lybmna
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lyfbfp
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lyfcz7
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lymign
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lymjkx
-*/
+/* @override http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lzqtxi */
 
 /* This file will hold the main styles for your website. */
 
@@ -70,6 +59,10 @@ h1.front {
 	color: whitesmoke;
 	padding-top: 10px;
 	border-top: medium solid silver;
+}
+
+#zone-postscript {
+	background-color: white;
 }
 
 /* @end */
@@ -185,3 +178,21 @@ div.field-name-field-icon img {
 
 
 /* @end */
+
+#block-views-services-block-1 div.view-services div.view-content div.odd {
+	float: left;
+	width: 49%;
+	margin-bottom: 10px;
+}
+
+#block-views-services-block-1 div.view-services div.view-content div.even {
+	float: left;
+	width: 49%;
+	margin-bottom: 10px;
+}
+
+#block-views-services-block-1 div.view-services div.icons {
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
