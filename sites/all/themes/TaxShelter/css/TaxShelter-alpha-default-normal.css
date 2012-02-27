@@ -2,6 +2,7 @@
 	http://taxshelter.biz/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?ly63ma
 	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?lymign
 	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?lymjkx
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?m02naq
 */
 
 /* This file will hold styles that are loaded using the same media query as the normal grid. */
@@ -34,12 +35,15 @@ div.branding-data {
 	margin-bottom: 10px;
 }
 
+
+
 div.view-services div.even div.icons img {
 	float: left;
-	margin-right: 10px;
+	margin-right: 1%;
 	margin-bottom: 10px;
 }
 div.view-services div.odd div.icons img {
 	float: left;
 	margin-bottom: 10px;
+	margin-left: 1%;
 }

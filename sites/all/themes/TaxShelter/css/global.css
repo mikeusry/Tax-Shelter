@@ -1,4 +1,7 @@
-/* @override http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lzqtxi */
+/* @override 
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lzqtxi
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m02lhl
+*/
 
 /* This file will hold the main styles for your website. */
 
@@ -131,10 +134,13 @@ border-top-right-radius: 20px;
 /* @end */
 
 /* @group Custom Blocks */
-.walmart img {
+.walmart img, .your-money img {
 	width: 100%;
+	max-width: 480px;
 	height: auto;
-}
+	}
+
+.walmart .block-inner, .your-money .block-inner {text-align: center;}
 
 .walmartoffer {
 	position: relative;
@@ -171,9 +177,9 @@ div.field-name-field-icon img {
 
 #block-views-services-block div.view-content div.icons img {
 	height: auto;
-	width: 100%;
 	max-width: 450px;
 	margin-bottom: 10px;
+	margin-right: 10px;
 }
 
 
@@ -196,3 +202,12 @@ div.field-name-field-icon img {
 	margin-bottom: 10px;
 	margin-right: 10px;
 }
+
+/* @group My Group */
+
+#block-views-services-block div.view-content div.icons img {
+	max-width: 450px;
+	margin-bottom: 10px;
+}
+
+/* @end */
