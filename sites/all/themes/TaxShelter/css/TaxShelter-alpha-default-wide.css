@@ -9,3 +9,5 @@ div.branding-data {
 	margin-left: auto;
 	width: auto;
 }
+
+#zone-menu, #region-menu {height: 0;}

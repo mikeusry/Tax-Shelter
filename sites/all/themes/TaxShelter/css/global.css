@@ -1,15 +1,23 @@
 /* @override 
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?lzqtxi
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m02lhl
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m03z6y
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0405h
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m048vr
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0znw8
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0zp01
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0zqkz
 */
-
-/* This file will hold the main styles for your website. */
-
 
 div.branding-data {
 	margin-right: auto;
 	margin-left: auto;
 	width: 253px;
+}
+
+body.html {
+	background: url(../images/tax_back.gif) repeat-x;
+}
+p{
+	font-size: 1.1em;
 }
 
 /* @group General */
@@ -32,7 +40,8 @@ div.field-name-field-taxonomy div.field-label {
 }
 
 h1.front {
-	font-size: 1.4em;
+	font-size: 2.25em;
+	font-family: 'Pontano Sans', sans-serif;
 	margin-bottom: 10px;
 	color: #353535;
 }
@@ -42,14 +51,7 @@ h1.front {
 
 /* @group Body & Wrappers */
 
-#page {
-	background-color: silver;
-}
-
-
-#section-header {
-	background-color: green;
-}
+#zone-menu, #region-menu {height: 0;}
 
 #zone-content {
 	background-color: white;
@@ -73,15 +75,18 @@ h1.front {
 /* @group Interior Zones */
 
 #zone-header {
-background-color: white;
--webkit-border-top-left-radius: 20px;
--webkit-border-top-right-radius: 20px;
--moz-border-radius-topleft: 20px;
--moz-border-radius-topright: 20px;
-border-top-left-radius: 20px;
-border-top-right-radius: 20px;
 	padding-top: 10px;
 	padding-right: 1px;
+}
+
+.front #zone-preface {
+	height: 260px;
+	background: url(../images/category_backs.jpg) repeat-x;
+	padding-top: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	margin-bottom: 10px;
 }
 
 
@@ -89,6 +94,13 @@ border-top-right-radius: 20px;
 /* @end */
 
 /* @group Navigation */
+
+#main-menu {background-color: black;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 3px 5px;
+}
 
 #main-menu a {
 	color: white;
@@ -98,9 +110,12 @@ border-top-right-radius: 20px;
 
 #main-menu li {
 	text-align: center;
-
 }
 
+nav.navigation {
+	text-align: center;
+
+}
 
 
 /* @end */
@@ -112,13 +127,17 @@ border-top-right-radius: 20px;
 }
 
 #block-webform-client-block-22 {
-	background-color: #353535;
+	background-color: #028000;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 	padding: 8px;
 	overflow: hidden;
 	color: white;
+}
+
+div.field-content.icons {
+	text-align: center;
 }
 
 #block-webform-client-block-22 h2 {
@@ -165,7 +184,7 @@ div.freecard {
 	font: 1.8em 'Lato', sans-serif;
 	text-align: center;
 	margin-top: .5em;
-	color: #FFFBDD;
+	color: black;
 	text-transform: uppercase;
 }
 
@@ -180,6 +199,39 @@ div.field-name-field-icon img {
 	max-width: 450px;
 	margin-bottom: 10px;
 	margin-right: 10px;
+}
+
+#zone-preface h2.block-title {
+	color: white;
+	font: 300 2em 'Pontano Sans', sans-serif;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+div.readmore-front a {
+	background-color: white;
+	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+	padding: 5px 7px;
+	float: right;
+	margin-right: 20px;
+	color: black;
+	text-decoration: none;
+}
+
+#block-block-7, #block-block-8  {
+	border-right: 1px solid #3F3F3F;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+#block-block-6{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#zone-preface p {
+	color: silver;
 }
 
 
@@ -211,3 +263,73 @@ div.field-name-field-icon img {
 }
 
 /* @end */
+
+#block-block-4 p {
+	color: black;
+}
+
+body.node-type-services #page-title  {
+	margin-bottom: 0;
+	font-family: 'Pontano Sans', sans-serif;
+}
+
+
+
+div.field-name-field-header-image img {
+	max-width: 470px;
+}
+
+/* @group Services Page */
+
+body.page-services h1{text-align: center;margin-bottom: 5px;
+}
+div.services-row img{
+float: left;
+	margin-right: 5px;
+}
+div.services-row {
+	clear: left;
+	margin-bottom: 10px;
+	margin-right: 2%;
+}
+
+#region-header-first img {
+	height: auto;
+	width: 80%;
+}
+#region-header-second img {
+	height: auto;
+	width: 100%;
+}
+
+div.services-row .views-field-title a {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+
+
+/* @end */
+
+/* @group FPSS */
+
+#views_slideshow_cycle_div_fpss-block_0 div.views-row-0 img {
+	margin-right: auto;
+}
+
+
+
+#views_slideshow_cycle_div_fpss-block_0 p {
+	text-align: center;
+	margin-bottom: 0;
+	font: 1.65em 'Pontano Sans', sans-serif;
+}
+
+
+
+/* @end */
+
+
+

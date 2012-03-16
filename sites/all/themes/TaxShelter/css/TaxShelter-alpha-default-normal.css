@@ -1,14 +1,12 @@
 /* @override 
-	http://taxshelter.biz/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?ly63ma
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?lymign
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?lymjkx
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?m02naq
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?m02nxn
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?m0405h
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?m048vr
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?m0zqkz
 */
 
-/* This file will hold styles that are loaded using the same media query as the normal grid. */
-#section-header {
-	background-color: red;
-}
+/* 960 */
+#section-header {}
 
 #main-menu li {
 	display: inline;
@@ -17,7 +15,9 @@
 	position: relative;
 	bottom: 160px;
 	float: right;
+	background-color: green;
 }
+#zone-menu, #region-menu {height: 0;}
 div.branding-data {
 	margin-right: auto;
 	margin-left: auto;
@@ -28,22 +28,49 @@ div.branding-data {
 	text-align: left;
 }
 
+
+#block-block-4 p {
+	margin-bottom: 0;
+}
+
+
+#block-block-2, #block-block-1 {
+	display: none;
+}
+
 #block-views-services-block div.view-content div.icons img {
 	height: auto;
-	width: 48%;
+	width: 305px;
 	max-width: 450px;
 	margin-bottom: 10px;
+	margin-right: 0;
+	padding: 2px;
 }
 
 
+div.field-name-field-header-image img {
+	max-width: 610px;
+}
 
-div.view-services div.even div.icons img {
+/* @group Services Page */
+
+body.page-services h1{text-align: center;margin-bottom: 5px;
+}
+body.page-services div.view-services div.icons img{
 	float: left;
-	margin-right: 1%;
+	margin-right: 10px;
 	margin-bottom: 10px;
+	margin-left: 10px;
+	max-width: 100%;
 }
-div.view-services div.odd div.icons img {
+
+div.services-row {
 	float: left;
-	margin-bottom: 10px;
-	margin-left: 1%;
+	margin-bottom: 15px;
+	width: 48%;
+	height: 137px;
+	margin-top: 10px;
+	clear: none;
 }
+
+/* @end */
