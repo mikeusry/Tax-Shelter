@@ -2,6 +2,7 @@
 	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default.css?lymjkx
 	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default.css?m048vr
 	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default.css?m0zqkz
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default.css?m18x89
 */
 
 /* This file will hold styles that are loaded using the same media query as the narrow grid. */
@@ -11,13 +12,3 @@
 #main-menu {
 	background-color: green;
 }
-
-#region-header-first {
-	display: none;
-}
-
-#region-header-second {
-	width: 100%;
-	height: auto;
-}
-

@@ -3,6 +3,7 @@
 	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?m0405h
 	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?m048vr
 	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?m0zqkz
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-normal.css?m18wtf
 */
 
 /* 960 */
@@ -25,7 +26,7 @@ div.branding-data {
 }
 
 #block-block-4 {
-	text-align: left;
+	text-align: center;
 }
 
 
@@ -48,9 +49,7 @@ div.branding-data {
 }
 
 
-div.field-name-field-header-image img {
-	max-width: 610px;
-}
+
 
 /* @group Services Page */
 
