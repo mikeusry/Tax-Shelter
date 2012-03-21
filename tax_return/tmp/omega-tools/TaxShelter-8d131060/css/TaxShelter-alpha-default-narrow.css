@@ -1,0 +1,7 @@
+/* @override http://taxshelter.biz/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-narrow.css?ly5l1a */
+
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+
+#zone-branding-wrapper {
+	background-color: fuchsia;
+}

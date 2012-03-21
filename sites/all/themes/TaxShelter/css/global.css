@@ -1,0 +1,388 @@
+/* @override 
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m03z6y
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0405h
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m048vr
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0znw8
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0zp01
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0zqkz
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m18wtf
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m18x89
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m18ymj
+*/
+
+div.branding-data {
+	margin-right: auto;
+	margin-left: auto;
+	width: 253px;
+}
+
+body.html {
+	background: url(../images/tax_back.gif) repeat-x;
+}
+p{
+	font-size: 1.1em;
+}
+
+/* @group General */
+
+div.field-name-field-taxonomy a {
+	text-decoration: none;
+	display: inline;
+	float: left;
+	margin-left: .8em;
+	margin-right: .8em;
+	color: #008000;
+}
+
+div.field-name-field-taxonomy div.field-label {
+	color: gray;
+}
+.weak {
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1.front {
+	font-size: 2.25em;
+	font-family: 'Pontano Sans', sans-serif;
+	margin-bottom: 10px;
+	color: #353535;
+}
+
+
+/* @end */
+
+/* @group Body & Wrappers */
+
+
+
+#zone-content {
+	background-color: white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#zone-footer-wrapper {
+	background-color: black;
+	color: whitesmoke;
+	padding-top: 10px;
+	border-top: medium solid silver;
+}
+
+#zone-postscript {
+	background-color: white;
+}
+
+/* @end */
+
+/* @group Interior Zones */
+
+#zone-header {
+	padding-top: 10px;
+	padding-right: 1px;
+	margin-bottom: 10px;
+}
+
+.front #zone-preface {
+	height: 260px;
+	background: url(../images/category_backs.jpg) repeat-x;
+	padding-top: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	margin-bottom: 10px;
+}
+
+
+
+/* @end */
+
+/* @group Navigation */
+
+#main-menu {background-color: black;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 3px 5px;
+}
+
+#main-menu a {
+	color: white;
+	font-size: 1.4em;
+	text-decoration: none;
+}
+
+#main-menu li {
+	text-align: center;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+nav.navigation {
+	text-align: center;
+
+}
+
+
+/* @end */
+
+/* @group Contact Block */
+
+#webform-component-office div.description {
+	color: whitesmoke;
+}
+
+#block-webform-client-block-22 {
+	background-color: #028000;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 8px;
+	overflow: hidden;
+	color: white;
+}
+
+div.field-content.icons {
+	text-align: center;
+}
+
+#block-webform-client-block-22 h2 {
+	text-align: center;
+}
+
+#block-webform-client-block-22 input, #block-webform-client-block-22 select {
+	width: 100%;
+}
+
+
+
+/* @end */
+
+/* @group Custom Blocks */
+.walmart img, .your-money img {
+	width: 100%;
+	max-width: 480px;
+	height: auto;
+	}
+
+.walmart .block-inner, .your-money .block-inner {text-align: center;}
+
+.walmartoffer {
+	position: relative;
+	bottom: 2em;
+	left: 30px;
+	font-size: 1.75em;
+	color: #008000;
+}
+
+div.freecard {
+	position: absolute;
+	padding-left: 65%;
+	top: 10%;
+	line-height: 1em;
+	font-weight: bold;
+	letter-spacing: .5em;
+	font-size: 2.25em;
+	font-style: italic;
+}
+
+#block-block-4 {
+	font: 1.8em 'Lato', sans-serif;
+	text-align: center;
+	margin-top: .5em;
+	color: black;
+	text-transform: uppercase;
+}
+
+div.field-name-field-icon img {
+	height: auto;
+	width: 100%;
+	max-width: 450px;
+}
+
+#block-views-services-block div.view-content div.icons img {
+	height: auto;
+	max-width: 450px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+#zone-preface h2.block-title {
+	color: white;
+	font: 300 2em 'Pontano Sans', sans-serif;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+div.readmore-front a {
+	background-color: white;
+	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+	padding: 5px 7px;
+	float: right;
+	margin-right: 20px;
+	color: black;
+	text-decoration: none;
+}
+
+#block-block-7, #block-block-8  {
+	border-right: 1px solid #3F3F3F;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+#block-block-6{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-height: 220px;
+}
+
+#zone-preface p {
+	color: silver;
+	font-size: 13px;
+}
+
+
+/* @end */
+
+#block-views-services-block-1 div.view-services div.view-content div.odd {
+	float: left;
+	width: 49%;
+	margin-bottom: 10px;
+}
+
+#block-views-services-block-1 div.view-services div.view-content div.even {
+	float: left;
+	width: 49%;
+	margin-bottom: 10px;
+}
+
+#block-views-services-block-1 div.view-services div.icons {
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+/* @group My Group */
+
+#block-views-services-block div.view-content div.icons img {
+	max-width: 450px;
+	margin-bottom: 10px;
+}
+
+/* @end */
+
+#block-block-4 p {
+	color: black;
+}
+
+body.node-type-services #page-title  {
+	margin-bottom: 0;
+	font-family: 'Pontano Sans', sans-serif;
+}
+
+
+
+div.field-name-field-header-image img {
+	max-width: 470px;
+}
+
+/* @group Services Page */
+
+body.page-services h1{text-align: center;margin-bottom: 5px;
+}
+div.services-row img{
+float: left;
+	margin-right: 5px;
+}
+div.services-row {
+	clear: left;
+	margin-bottom: 10px;
+	margin-right: 2%;
+}
+
+#region-header-first img {
+	height: auto;
+	width: 80%;
+}
+#region-header-second img {
+	height: auto;
+	width: 100%;
+}
+
+div.services-row .views-field-title a {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+
+
+/* @end */
+
+/* @group FPSS */
+
+#views_slideshow_cycle_div_fpss-block_0 div.views-row-0 img {
+	margin-right: auto;
+}
+
+
+
+.fpss p {
+	text-align: center;
+	margin-bottom: 0;
+	font: 1.65em 'Pontano Sans', sans-serif;
+}
+
+
+
+/* @end */
+
+/* @group Contact Page */
+
+#block-views-office-maps-block h2.block-title {
+	text-align: center;
+	font-size: 2em;
+}
+
+#block-views-office-maps-block div.view-office-maps div.views-field-title a {
+	text-decoration: none;
+	color: green;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+#block-views-office-maps-block div.views-row{
+	float: left;
+	margin-right: 10px;
+}
+
+#block-views-office-maps-block div.attachment div.views-row {
+	float: none;
+	margin-right: 0;
+	text-align: center;
+}
+
+div.phone {
+	line-height: 2.5em;
+	font-weight: bold;
+}
+
+div.headquarters, #block-views-office-maps-block div.view-footer {
+	text-align: center;
+	color: black;
+	background-color: silver;
+	font-weight: bold;
+	font-size: 1.25em;
+	opacity: 0.5;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+
+
+/* @end */
+
+
+

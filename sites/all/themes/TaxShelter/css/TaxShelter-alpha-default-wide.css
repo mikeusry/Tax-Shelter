@@ -1,0 +1,13 @@
+/* This file will hold styles that are loaded using the same media query as the wide grid. */
+
+
+#main-menu li {
+	display: inline;
+}
+div.branding-data {
+	margin-right: auto;
+	margin-left: auto;
+	width: auto;
+}
+
+#zone-menu, #region-menu {height: 0;}

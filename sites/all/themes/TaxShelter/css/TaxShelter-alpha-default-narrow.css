@@ -1,0 +1,65 @@
+/* @override 
+	http://taxshelter.bix/sites/all/themes/omega/alpha/css/grid/alpha_default/narrow/alpha-default-narrow-12.css?m03z6y
+	http://taxshelter.bix/sites/all/themes/omega/alpha/css/grid/alpha_default/narrow/alpha-default-narrow-12.css?m03zhb
+	http://taxshelter.bix/sites/all/themes/omega/alpha/css/grid/alpha_default/narrow/alpha-default-narrow-12.css?m03zry
+	http://taxshelter.bix/sites/all/themes/omega/alpha/css/grid/alpha_default/narrow/alpha-default-narrow-12.css?m0405h
+	http://taxshelter.bix/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-narrow.css?m048vr
+*/
+
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+
+/* IPAD Portrait */
+
+
+
+#section-header {}
+
+
+
+#block-views-services-block div.view-content div.icons img {
+	height: auto;
+	width: 220px;
+	max-width: 450px;
+	float: left;
+	margin-right: 0;
+	padding: 5px;
+	margin-bottom: 0;
+}
+
+nav.navigation {
+	text-align: center;
+}
+
+div.field-name-field-header-image img {
+	max-width: 472px;
+}
+#main-menu {
+	background-color: red;
+}
+/* @group Services Page */
+
+body.page-services h1{text-align: center;margin-bottom: 5px;
+}
+body.page-services div.view-services div.icons img{
+	float: left;
+	max-width: 48%;
+	margin-bottom: 10px;
+}
+
+div.view-display-id-page_2 div.odd img {
+	margin-right: 10px;
+}
+
+div.services-row {
+	float: left;
+	margin-bottom: 15px;
+	width: 48%;
+	margin-top: 10px;
+	height: 150px;
+	clear: none;
+	margin-right: 2%;
+}
+
+
+
+/* @end */
