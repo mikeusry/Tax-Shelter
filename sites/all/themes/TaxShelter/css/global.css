@@ -1,13 +1,5 @@
 /* @override 
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m03z6y
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0405h
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m048vr
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0znw8
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0zp01
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m0zqkz
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m18wtf
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m18x89
-	http://taxshelter.bix/sites/all/themes/TaxShelter/css/global.css?m18ymj
+	http://tax.gajaycees.org/sites/all/themes/TaxShelter/css/global.css?mby5kq
 */
 
 div.branding-data {
@@ -99,29 +91,7 @@ h1.front {
 
 /* @group Navigation */
 
-#main-menu {background-color: black;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	padding: 3px 5px;
-}
 
-#main-menu a {
-	color: white;
-	font-size: 1.4em;
-	text-decoration: none;
-}
-
-#main-menu li {
-	text-align: center;
-	margin-right: 10px;
-	margin-left: 10px;
-}
-
-nav.navigation {
-	text-align: center;
-
-}
 
 
 /* @end */

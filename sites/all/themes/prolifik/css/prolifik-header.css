@@ -1,0 +1,21 @@
+/* @override 
+	http://hi-express.loc/sites/all/themes/prolifik/css/prolifik-header.css?m5ly5f
+	http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-header.css?mby5kq
+	http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-header.css?mby8bq
+	http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-header.css?mby8ok
+*/
+
+#section-header {
+  overflow: hidden;
+  position: relative;
+
+}
+
+#zone-header {
+	background-position: center center;
+}
+
+#zone-header-wrapper {
+
+	background: url(../images/fpss-back.png) center;
+}

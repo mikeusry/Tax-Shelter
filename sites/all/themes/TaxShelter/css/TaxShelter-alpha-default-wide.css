@@ -1,8 +1,10 @@
+/* @override http://tax.gajaycees.org/sites/all/themes/TaxShelter/css/TaxShelter-alpha-default-wide.css?mby5kq */
+
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
 
 
 #main-menu li {
-	display: inline;
+
 }
 div.branding-data {
 	margin-right: auto;

@@ -1,0 +1,28 @@
+/* @override http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-preface.css?mby5kq */
+
+/* Preface */
+#section-content .zone-wrapper #zone-preface .region-inner {
+  padding: 20px;
+}
+#zone-preface .block .content {
+  color: #868686;
+}
+#zone-preface .block .content strong {
+  color: #414141;
+}
+/* Hide on interior pages */
+.not-front #zone-preface-wrapper {
+  display: none;
+}
+
+#zone-preface-wrapper {
+	background: #464b50;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ2NGI1MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMzJSIgc3RvcC1jb2xvcj0iI2FhYWZiNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(top,  #464b50 0%, #aaafb4 33%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#464b50), color-stop(33%,#aaafb4));
+background: -webkit-linear-gradient(top,  #464b50 0%,#aaafb4 33%);
+background: -o-linear-gradient(top,  #464b50 0%,#aaafb4 33%);
+background: -ms-linear-gradient(top,  #464b50 0%,#aaafb4 33%);
+background: linear-gradient(to bottom,  #464b50 0%,#aaafb4 33%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464b50', endColorstr='#aaafb4',GradientType=0 );
+}

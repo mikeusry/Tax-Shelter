@@ -13,10 +13,6 @@
 	display: inline;
 }
 #main-menu {
-	position: relative;
-	bottom: 160px;
-	float: right;
-	background-color: green;
 }
 #zone-menu, #region-menu {height: 0;}
 div.branding-data {
