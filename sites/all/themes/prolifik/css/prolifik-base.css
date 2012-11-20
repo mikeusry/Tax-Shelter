@@ -2,37 +2,75 @@
 	http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-base.css?mby5kq
 	http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-base.css?mby8bq
 	http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-base.css?mby8ok
+	http://tax.loc/sites/all/themes/prolifik/css/prolifik-base.css?mdscsl
+	http://tax.loc/sites/all/themes/prolifik/css/prolifik-base.css?mdsihr
 */
 
 /* This file will hold the main styles for your website. */
 
 #block-block-4 {
-	text-align: center;
-	font-size: 26px;
-	margin-top: 20px;
+	text-shadow: .15em .15em .2em #000000;
+	font-size: 1.5em;
 }
 
 /* @group FPSS */
-div.fpss {}
-
-div.fpss-img{
+div.fpss {
 }
-div.fpss-img img {
 
+div#fpss-text {
+	padding-top: 50px;
 }
+
+div.fpssimage {
+	float: left;
+	margin-right: 20px;
+	margin-top: 30px;
+}
+
 
 div.fpss-big {
-	text-transform: uppercase;font-size: 10em;display: inline;margin-right: 5px; color: #F7F7F7;
+	text-transform: uppercase;font-size: 4em;display: inline-block;margin-right: 5px; color: #F7F7F7;
+	font-weight: bold;
+	float: left;
 }
 
-#views_slideshow_cycle_div_fpss-block_0 div.fpss p {
+div.fpss-p {
 	color: #F7F7F7;
+	text-align: left;
+	font-size: 1.65em;
 }
+
 div.fpss-reg {
 	text-transform: uppercase;
-	font-size:7em;color: #F7F7F7;
+	font-size: 4em;color: #F7F7F7;
 }
 
+
+
+div.fpss a {background: rgb(140,240,255);
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhjZjBmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iIzAwOTZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDY0OTYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(140,240,255,1) 0%, rgba(0,150,255,1) 25%, rgba(0,100,150,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(140,240,255,1)), color-stop(25%,rgba(0,150,255,1)), color-stop(100%,rgba(0,100,150,1)));
+background: -webkit-linear-gradient(top,  rgba(140,240,255,1) 0%,rgba(0,150,255,1) 25%,rgba(0,100,150,1) 100%);
+background: -o-linear-gradient(top,  rgba(140,240,255,1) 0%,rgba(0,150,255,1) 25%,rgba(0,100,150,1) 100%);
+background: -ms-linear-gradient(top,  rgba(140,240,255,1) 0%,rgba(0,150,255,1) 25%,rgba(0,100,150,1) 100%);
+background: linear-gradient(to bottom,  rgba(140,240,255,1) 0%,rgba(0,150,255,1) 25%,rgba(0,100,150,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8cf0ff', endColorstr='#006496',GradientType=0 );
+color: white;
+font-size: 1.5em;
+text-transform: uppercase;
+font-weight: bold;
+border-radius: 10px;
+padding: 10px 20px;
+}
+
+div.learnmore {
+	position: absolute;
+	background: url(../images/learnmore_shadow.png) no-repeat center bottom;
+	padding-bottom: 28px;
+	top: 270px;
+	left: 60%;
+}
 
 /* @end */
 body {background-color: black;}
@@ -178,4 +216,35 @@ ul.quicktabs-tabs li a {
   float: left;
   display: block;
 }
+
+/* @group Front Boxes */
+
+.front h2 {
+	color: #0E0E0E;
+	text-align: center;
+}
+.front img.left-front {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+#block-body hr {
+	height: 4px;
+	clear: both;
+	padding-top: 0;
+	background-color: #DCDCDC;
+}
+
+#block-body div.readmore-front a {
+	background-color: #788296;
+	padding: 5px 10px;
+	color: white;
+	border-radius: 4px;
+}
+
+#block-body p {
+	height: 110px;
+}
+
+/* @end */
 

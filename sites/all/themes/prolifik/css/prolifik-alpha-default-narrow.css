@@ -1,4 +1,6 @@
-/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* @override 
+	http://tax.loc/sites/all/themes/prolifik/css/prolifik-alpha-default-narrow.css?mdsihr */
+
 
 .logo-img {
   float: left;
@@ -25,3 +27,45 @@
   width: 300px;
   z-index: 1;
 }
+
+#zone-menu {
+  min-height: 30px;
+  z-index: 10;
+  float: right;
+  width: 50%;
+}
+
+
+#zone-menu-wrapper {
+	position: relative;
+	bottom: 70px;
+}
+#zone-header-wrapper {
+	margin-top: -70px;
+}
+
+div.fpss {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+}
+
+/* @group Front Boxes */
+
+.front h2 {
+	text-align: left;
+	padding-top: 30px;
+}
+
+.front .region-postfix p {
+	clear: both;
+}
+
+.front img.left-front {
+	display: inline;
+	float: left;
+	margin-bottom: 10px;
+}
+
+/* @end */

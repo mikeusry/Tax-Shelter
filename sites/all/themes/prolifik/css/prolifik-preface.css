@@ -1,14 +1,19 @@
-/* @override http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-preface.css?mby5kq */
+/* @override http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-preface.css?mby5kq
+	http://tax.loc/sites/all/themes/prolifik/css/prolifik-preface.css?mdscsl
+	http://tax.loc/sites/all/themes/prolifik/css/prolifik-preface.css?mdsihr */
 
 /* Preface */
 #section-content .zone-wrapper #zone-preface .region-inner {
   padding: 20px;
 }
 #zone-preface .block .content {
-  color: #868686;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #zone-preface .block .content strong {
-  color: #414141;
+  color: white;
 }
 /* Hide on interior pages */
 .not-front #zone-preface-wrapper {
@@ -26,3 +31,4 @@ background: -ms-linear-gradient(top,  #464b50 0%,#aaafb4 33%);
 background: linear-gradient(to bottom,  #464b50 0%,#aaafb4 33%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464b50', endColorstr='#aaafb4',GradientType=0 );
 }
+

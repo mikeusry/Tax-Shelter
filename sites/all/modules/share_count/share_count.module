@@ -1,0 +1,354 @@
+<?php
+
+/**
+ * @file
+ * Share Count module.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function share_count_menu() {
+  $items['admin/config/services/share-services'] = array(
+    'title' => 'Share count social services administration.',
+    'description' => 'Enable or disable share services.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('share_count_service_form'),
+    'access arguments' => array('administer share services'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+
+/**
+ * Implements hook_permission().
+ */
+function share_count_permission() {
+  return array(
+    'administer share counter' => array(
+      'title' => t('Administer share counters'),
+    ),
+  );
+}
+
+/**
+ * Creates the admin form.
+ */
+function share_count_service_form($form, &$form_state) {
+  $services = db_query('SELECT sid, enabled, admin_title, title FROM {share_services} ORDER BY sid');
+  $delta = $services->rowCount();
+  $form = array();
+
+  // If no services, then make some.
+  if ($delta == 0) {
+    $form['share_services'] = array(
+      '#tree' => TRUE,
+    );
+    $form['share_services']['twitter'] = array(
+      'enabled' => array(
+        '#type' => 'checkbox',
+        '#default_value' => 0,
+        '#title' => 'Enable',
+      ),
+      'title' => array(
+        '#markup' => 'Twitter service',
+      ),
+    );
+    $form['share_services']['facebook'] = array(
+      'enabled' => array(
+        '#type' => 'checkbox',
+        '#default_value' => 0,
+        '#title' => 'Enable',
+      ),
+      'title' => array(
+        '#markup' => 'Facebook service',
+      ),
+    );
+    $form['share_services']['plusone'] = array(
+      'enabled' => array(
+        '#type' => 'checkbox',
+        '#default_value' => 0,
+        '#title' => 'Enable',
+      ),
+      'title' => array(
+        '#markup' => 'Google Plus One service',
+      ),
+    );
+    $form['share_services']['linkedin'] = array(
+      'enabled' => array(
+        '#type' => 'checkbox',
+        '#default_value' => 0,
+        '#title' => 'Enable',
+      ),
+      'title' => array(
+        '#markup' => 'Linkedin Share service',
+      ),
+    );
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Save'),
+    );
+  }
+  else {
+    $form['share_services'] = array(
+      '#tree' => TRUE,
+    );
+    foreach ($services as $service) {
+      $form['share_services'][$service->admin_title] = array(
+        'enabled' => array(
+          '#type' => 'checkbox',
+          '#default_value' => $service->enabled,
+        ),
+        'title' => array(
+          '#markup' => check_plain($service->title),
+        ),
+      );
+    }
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Save'),
+    );
+  }
+
+  return $form;
+}
+
+/**
+ * Handles form submission for share_count_service_form().
+ */
+function share_count_service_form_submit($form, &$form_state) {
+  foreach ($form_state['values']['share_services'] as $admin_title => $service) {
+    $fields = array(
+      'title' => $form_state['complete form']['share_services'][$admin_title]['title']['#markup'],
+      'admin_title' => $admin_title,
+      'enabled' => $service['enabled'],
+    );
+    // $db_service = db_query('SELECT * FROM {share_services} WHERE sid = :sid', array(':sid' => $sid))->fetchObject();
+    $title = db_query('SELECT admin_title FROM {share_services} WHERE admin_title = :admin_title', array(':admin_title' => $admin_title))->fetchObject();
+
+    if (!isset($title->admin_title)) {
+      db_insert('share_services')
+        ->fields($fields)
+        ->execute();
+    }
+    else {
+      db_update('share_services')
+        ->fields($fields)
+        ->condition('admin_title', $admin_title)
+        ->execute();
+    }
+  }
+  drupal_set_message(t('Share service settings have been applied.'));
+}
+
+/**
+ * Implements hook_entity_load()
+ */
+function share_count_entity_load($entities, $type) {
+  $results = db_query("SELECT entity_id,updated,sid,count FROM {share_count} WHERE entity_type = :type AND entity_id IN (:ids)", array(':type' => $type, ':ids' => array_keys($entities)))->fetchAll();
+  foreach ($results as $result) {
+    $entities[$result->entity_id]->share_count[$result->sid] = array(
+      'count' => $result->count,
+      'updated' => $result->updated,
+    );
+  }
+}
+
+/**
+ * Implements hook_entity_view()
+ */
+function share_count_entity_view($entity, $type, $view_mode, $langcode) {
+
+  list($id) = entity_extract_ids($type, $entity);
+  $uri = entity_uri($type, $entity);
+
+  // If we are on a full entity, and it has a path, and is published.
+  if ($view_mode == 'full' && isset($entity->nid) && $entity->nid == $id && $entity->status == 1) {
+    // Get the services that may be recorded.
+    $services = db_query('SELECT sid,enabled,admin_title,title FROM {share_services} ORDER BY sid');
+
+    $delta = $services->rowCount();
+
+    // Get the real path that services would be using.
+    $path = drupal_get_path_alias($entity->uri['path']);
+
+    // If there are any services, the lets run through those.
+    if ($delta > 0) {
+      foreach ($services as $service) {
+        // Not interested in not used services.
+        if ($service->enabled) {
+          $entity_info = entity_get_info($type);
+
+          // Check to see if there are any records for this count on this path.
+          $current_counter = isset($entity->share_count) ? $entity->share_count : NULL;
+
+          // Get some date stuff straight.
+          $date = time();
+          $a_day = 86400; // Set this to 86400 for a full day between checking otherwise
+                               // it will call external data each entity view.
+
+          // If there is no counter, or if the counter is older than half a day
+          // query this service and see if there is a count, and update the counter
+          // with that number if so. We check for _not_ current_counter first, so
+          // that we won't evaluate and object item on an object that is empty.
+          if ((!$current_counter) || ($date - $current_counter[$service->sid]['updated']) > $a_day) {
+            $count = call_user_func('share_count_' . $service->admin_title . '_count', $path);
+
+            $fields = array(
+              'sid' => $service->sid,
+              'updated' => $date,
+              'count' => $count,
+              'entity_type' => $type,
+              'entity_id' => $id,
+            );
+
+            db_merge('share_count')
+              ->key(array('sid' => $service->sid, 'entity_type' => $type, 'entity_id' => $id))
+              ->fields($fields)
+              ->execute();
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Load and return a particular count. Not used for anything yet, but could be.
+ */
+function share_count_load($sid) {
+  $count = entity_load('share_count', array($sid), array(), $reset);
+  return !empty($count) ? reset($count) : FALSE;
+}
+
+
+/**
+ * Implements hook_views_api().
+ */
+function share_count_views_api() {
+  return array(
+    'api' => 3,
+  );
+}
+
+
+/**
+ * share_count_twitter_count()
+ *
+ * @param $path
+ *   The path of the entity being counted.
+ *
+ * @return
+ *   Number of times this item has been tweeted.
+ */
+function share_count_twitter_count($path) {
+  global $base_url;
+  $twitter_url = "http://urls.api.twitter.com/1/urls/count.json?url=" . $base_url . '/' . $path;
+  $twitter_json = _share_count_get_remote_counts($twitter_url);
+  $twitter_result = drupal_json_decode($twitter_json->data);
+  return $twitter_result['count'];
+}
+
+/**
+ * share_count_facebook_count()
+ *
+ * @param $path
+ *   The path of the entity being counted.
+ *
+ * @return
+ *   Number of times this item has been shared.
+ */
+function share_count_facebook_count($path) {
+  global $base_url;
+  $fb_url = "http://graph.facebook.com/?id=" . $base_url . '/' . $path;
+  $fb_json = _share_count_get_remote_counts($fb_url);
+  $fb_result = drupal_json_decode($fb_json->data);
+  if (!isset($fb_result['shares'])) {
+    return 0;
+  }
+  return $fb_result['shares'];
+}
+
+/**
+ * share_count_plusone_count()
+ *
+ * @param $path
+ *   The path of the entity being counted.
+ *
+ * @param $person
+ *   The person id.
+ *
+ * @return
+ *   Number of times this item has been plusoned.
+ *
+ * @link http://www.tomanthony.co.uk/blog/google_plus_one_button_seo_count_api/ @endlink
+ */
+function share_count_plusone_count($path) {
+  global $base_url;
+
+  // Build the JSON data for the API request.
+  $data['method'] = 'pos.plusones.get';
+  $data['id'] = 'p';
+  $data['params']['nolog'] = TRUE;
+  $data['params']['id'] = $base_url . '/' . $path;
+  $data['params']['source'] = 'widget';
+  $data['params']['userId'] = '@viewer';
+  $data['params']['groupId'] = '@self';
+  $data['jsonrpc'] = '2.0';
+  $data['key'] = 'p';
+  $data['apiVersion'] = 'v1';
+
+  $url = 'https://clients6.google.com/rpc?key=AIzaSyCKSbrvQasunBoV16zDH9R33D88CeLr9gQ';
+  $options['data'] = json_encode($data);
+  $options['method'] = 'POST';
+  $options['headers']['Content-Type'] = 'application/json';
+
+  $request = drupal_http_request($url, $options);
+  if (empty($request->error) && !empty($request->data)) {
+    $request->data = json_decode($request->data);
+    if (isset($request->data->result->metadata->globalCounts->count)) {
+      return $request->data->result->metadata->globalCounts->count;
+    }
+  }
+}
+
+/**
+ * share_count_linkedin_count()
+ *
+ * @param $path
+ *   The path of the entity being counted.
+ *
+ * @return
+ *   Number of times this item has been plusoned.
+ */
+function share_count_linkedin_count($path) {
+  global $base_url;
+  $linkedin_url = "http://www.linkedin.com/cws/share-count?url=" . $base_url . '/' . $path . '&type=JSON';
+  $linkedin_json = _share_count_get_remote_counts($linkedin_url);
+  $temp1 = drupal_json_decode($linkedin_json->data);
+  $temp2 = substr($temp1, 26);
+  $linkedin_json = drupal_json_decode($temp2);
+  return $linkedin_json['count'];
+}
+
+/**
+ * _share_count_get_remote_counts()
+ *   Internal function to retrieve external data
+ *
+ * @param $remote_path
+ *   The remote url, fully created, used to get the data.
+ *
+ * @return
+ *   Usually a json object that will need to be parsed.
+ */
+function _share_count_get_remote_counts($remote_path) {
+  $options = array('timeout' => 3);
+  $json = drupal_http_request($remote_path, $options);
+
+  // $json will always be something if there is a connection.
+  if ($json) {
+    return $json;
+  }
+  return 0;
+}

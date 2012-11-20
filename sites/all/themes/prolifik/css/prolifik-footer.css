@@ -1,4 +1,5 @@
-/* @override http://shs.loc/sites/all/themes/prolifik/css/prolifik-footer.css?m67bl9 */
+/* @override http://shs.loc/sites/all/themes/prolifik/css/prolifik-footer.css?m67bl9
+	http://tax.loc/sites/all/themes/prolifik/css/prolifik-footer.css?mdsbk2 */
 
 /* Footer */
 #zone-footer-wrapper {
@@ -7,8 +8,35 @@
 	-webkit-box-shadow: #666 0px 0px 10px;
 -moz-box-shadow: #666 0px 0px 10px;
 box-shadow: #666 0px 0px 10px;
-background-color: #005094;
+background: rgb(0,0,0);
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzA4MTAyMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(8,16,33,1) 50%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(50%,rgba(8,16,33,1)));
+background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(8,16,33,1) 50%);
+background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(8,16,33,1) 50%);
+background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(8,16,33,1) 50%);
+background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(8,16,33,1) 50%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#081021',GradientType=0 );
+
 }
+
+/* @group Schema.org */
+
+div.business {
+	color: #b7b8b7;
+	font-size: 1.25em;
+}
+
+div.business span.name {
+	font-size: 2em;
+}
+
+/* @end */
+#zone-footer {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
 #zone-footer-wrapper a,
 #zone-footer-wrapper a:link
 #zone-footer-wrapper a:visited {

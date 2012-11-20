@@ -4,6 +4,8 @@
 	http://btcv.biz/sites/all/themes/prolifik/css/prolifik-menu.css?m5f2cd
 	http://hi-express.loc/sites/all/themes/navin/css/prolifik-menu.css?m5pnkk
 	http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-menu.css?mby5kq
+	http://tax.loc/sites/all/themes/prolifik/css/prolifik-menu.css?mdsbk2
+	http://tax.loc/sites/all/themes/prolifik/css/prolifik-menu.css?mdscsl
 */
 
 /* Menu */
@@ -11,9 +13,14 @@
 #zone-menu {
   min-height: 30px;
   z-index: 10;
-  }
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
 
-#zone-menu-wrapper {}
+#zone-menu-wrapper {
+
+}
 #region-menu .region-inner {
   margin: 0 -10px;
 }
@@ -77,6 +84,25 @@ text-align: center;
   padding: 0 10px;
 }
 
-nav.navigation {
+/* @group Menu Icons */
 
+
+
+/* @end */
+
+#region-menu ul.menu li #home {
+	background: url(../images/tax_home.png) no-repeat center top;
+	padding-top: 35px;
+}
+#region-menu ul.menu li #about {
+	background: url(../images/tax_about.png) no-repeat center top;
+	padding-top: 35px;
+}
+#region-menu ul.menu li #services {
+	background: url(../images/tax_services.png) no-repeat center top;
+	padding-top: 35px;
+}
+#region-menu ul.menu li #contact {
+	background: url(../images/tax_contact.png) no-repeat center top;
+	padding-top: 35px;
 }

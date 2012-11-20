@@ -1,6 +1,4 @@
-/* @override http://shs.loc/sites/all/themes/prolifik/css/prolifik-alpha-default-normal.css?m67bl9 */
 
-/* This file will hold styles that are loaded using the same media query as the normal grid. */
 
 #logo {
   width: 250px;
@@ -14,4 +12,16 @@
   top: 35px;
   width: 300px;
   z-index: 1;
+}
+
+#zone-menu {
+
+}
+
+#zone-menu-wrapper {
+	
+}
+
+#block-block-4 {
+	font-size: 2.7em;
 }

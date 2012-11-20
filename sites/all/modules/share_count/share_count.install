@@ -1,0 +1,77 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function share_count_schema() {
+  $schema['share_services'] = array(
+    'description' => 'Stores service names and status',
+    'fields' => array(
+      'sid' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'The primary identifier for a social service.',
+      ),
+      'title' => array(
+        'description' => 'The name of the social service that is being counted.',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => NULL,
+      ),
+      'admin_title' => array(
+        'description' => 'The name of the social service that is being counted.',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => NULL,
+      ),
+      'enabled' => array(
+        'description' => 'Whether this service is being counted or not.',
+        'type' => 'int',
+        'size' => 'tiny',
+        'unsigned' => TRUE,
+        'default' => 1,
+      ),
+    ),
+    'primary key' => array('sid'),
+  );
+
+  $schema['share_count'] = array(
+    'description' => 'Stores share counts per node for certain items.',
+    'fields' => array(
+      'sid' => array(
+        'description' => 'The primary identifier for a social service.',
+        'type' => 'varchar',
+        'length' => 128,
+        'default' => NULL,
+      ),
+      'updated' => array(
+        'desctiption' => 'When the share were last updated.',
+        'type' => 'int',
+        'default' => 0,
+      ),      
+      'count' => array(
+        'desctiption' => 'How many shares?',
+        'type' => 'int',
+        'default' => 0,
+      ),
+      'entity_type' => array(
+        'description' => 'The type of the item being counted.',
+        'type' => 'varchar',
+        'length' => 32,
+        'default' => NULL,
+      ),
+      'entity_id' => array(
+        'desctiption' => 'When the share were last updated.',
+        'type' => 'int',
+        'default' => 0,
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('sid', 'entity_type', 'entity_id'), 
+  );
+
+  return $schema;
+}
+
+
