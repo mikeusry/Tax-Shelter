@@ -1,16 +1,31 @@
+/* @override 
+	http://tax.loc/sites/all/themes/prolifik/css/prolifik-header.css?mdslgm */
+
+.not-front #section-header {
+	height: 185px;
+}
 
 #section-header {
   overflow: hidden;
   position: relative;
-
+-webkit-box-shadow: 0 0 30px #666;
+-moz-box-shadow: 0 0 30px #666;
+box-shadow: 0 0 30px #666;
+margin-bottom: 20px;
 }
 
 #zone-header {
-	background: url(../images/fpss-back.png) no-repeat scroll center top;
-	height: 375px;
+
 }
 
 
+
 #zone-header-wrapper {
-	
+background: url(../images/fpss-back.png) repeat-x scroll 0 top;
+height: 375px;	
+}
+
+#block-system-main .view-frontpage h1.field-content {position: relative;
+	right: -999px;
+	height: 0;
 }

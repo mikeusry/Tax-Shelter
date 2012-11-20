@@ -1,12 +1,14 @@
 /* @override 
-	http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-base.css?mby5kq
-	http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-base.css?mby8bq
-	http://tax.gajaycees.org/sites/all/themes/prolifik/css/prolifik-base.css?mby8ok
-	http://tax.loc/sites/all/themes/prolifik/css/prolifik-base.css?mdscsl
 	http://tax.loc/sites/all/themes/prolifik/css/prolifik-base.css?mdsihr
+	http://tax.loc/sites/all/themes/prolifik/css/prolifik-base.css?mdslgm
 */
 
 /* This file will hold the main styles for your website. */
+html {background-color: black;}
+
+body {
+	
+}
 
 #block-block-4 {
 	text-shadow: .15em .15em .2em #000000;
@@ -73,7 +75,7 @@ div.learnmore {
 }
 
 /* @end */
-body {background-color: black;}
+
 
 
 /* Links */
@@ -81,24 +83,25 @@ a, a:link {
   text-decoration: none;
 }
 a, a:link, a:visited, a:active {
-  color: #AD3B43;
+  color: #00dd00;
 }
+
 a:hover {
   text-decoration: underline;
+  color: #00a400;
 }
 
 /* Headers */
 body > #page h1, body > #page h2, body > #page h3,
 body > #page h4, body > #page h5, body > #page h6 {
-  border-color: #D4D4D4;
-  color: #191F53;
+  border-color: #c7c6c4;
   font-weight: normal;
   letter-spacing: 0;
   line-height: 1em;
 }
 
 body > #page h1#page-title {
-  color: #191F53;
+  color: #00dd00;
 }
 
 /* Admin Menu */
@@ -126,6 +129,8 @@ body > #page h1#page-title {
 #page {
   position: relative;
 }
+
+p {color: #c7c6c4;}
 
 /* Blocks */
 .block .content {
@@ -220,8 +225,8 @@ ul.quicktabs-tabs li a {
 /* @group Front Boxes */
 
 .front h2 {
-	color: #0E0E0E;
 	text-align: center;
+	color: white;
 }
 .front img.left-front {
 	display: block;
@@ -229,7 +234,7 @@ ul.quicktabs-tabs li a {
 	margin-left: auto;
 }
 #block-body hr {
-	height: 4px;
+	height: 1px;
 	clear: both;
 	padding-top: 0;
 	background-color: #DCDCDC;
@@ -240,6 +245,7 @@ ul.quicktabs-tabs li a {
 	padding: 5px 10px;
 	color: white;
 	border-radius: 4px;
+	text-shadow: 1px 1px 2px #090909;
 }
 
 #block-body p {
@@ -248,3 +254,55 @@ ul.quicktabs-tabs li a {
 
 /* @end */
 
+#block-system-main .view-services .views-row-odd {
+	width: 48%; float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	min-height: 120px;
+}
+#block-system-main .view-services .views-row-even {
+	margin-bottom: 20px;
+	min-height: 120px;
+}
+#block-views-services-block-2 div.views-row {
+	text-align: left;
+	margin-bottom: 10px; border-bottom: 1px solid #333;
+}
+
+#block-views-services-block-2 div.views-row a {color: white;
+	text-transform: uppercase;
+}
+#block-views-services-block-2 div.views-row a:hover, #block-views-services-block-2 div.views-row a.active {color: #00dd00;
+	text-decoration: none;
+}
+
+.field-name-field-header-image img {
+	width: 100%; height: auto;
+}
+
+
+#directmail-200af443-subscriber_email {
+min-width: 200px;
+background: rgb(0,0,0);
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMyJSIgc3RvcC1jb2xvcj0iIzUwNWE2NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(80,90,100,1) 32%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(32%,rgba(80,90,100,1)));
+background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(80,90,100,1) 32%);
+background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(80,90,100,1) 32%);
+background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(80,90,100,1) 32%);
+background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(80,90,100,1) 32%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#505a64',GradientType=0 );
+
+}
+
+form.directmail-subscribe-form {
+	margin-top: 10px;color: white;
+}
+input::-webkit-input-placeholder {color: white;
+	background: url(../images/mail.png) no-repeat;
+	padding-left: 22px;
+}
+input:-moz-placeholder {color: white;
+	background: url(../images/mail.png) no-repeat;
+	padding-left: 22px;
+}
